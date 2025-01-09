@@ -55,3 +55,26 @@ def mask_data(input_csv, rules_json, output_csv):
         writer.writerows(masked_rows)
 
 mask_data('data.csv', 'rules.json', 'masked_data.csv')
+
+INPUT FILE
+Name,Email,Phone,SSN
+swathi,swathi@gmail.com,123-456-7890,123-456-7890
+meghana,meghanaa@gmail.com,987-654-3210,987-65-4321
+deva,devaa@gmail.com,111-222-3333,111-22-3333
+gayu,gayuuu@gmail.com,234567890,234567890
+vinyah,vinyahhh@gmal.com,234567890,123456789
+sathish,sathishh@gmail.com,1234567891,345678901
+Bharat,bharathh@gmail.com,1234567890,123456789
+vijay,vijayyy@gmail.com,1234556789,123456789
+
+OUTPUT FILE
+Name,Email,Phone,SSN
+swathi,*@gmail.com,*-*-7890,*-*-*
+meghana,*@gmail.com,*-*-3210,*-*-*
+deva,*@gmail.com,*-*-3333,*-*-*
+gayu,*@gmail.com,*-*-7890,*-*-*
+vinyah,*@gmal.com,*-*-7890,*-*-*
+sathish,*@gmail.com,*-*-7891,*-*-*
+Bharat,*@gmail.com,*-*-7890,*-*-*
+vijay,*@gmail.com,*-*-6789,*-*-*
+
